@@ -28,4 +28,4 @@ Feature: Registeration to BookStoreApplication
     And enter password
     And click on I am not robot checkbox
     And click on register button
-    Then vallidate User Register Successfully alert message
+    Then vallidate User Register Successfully

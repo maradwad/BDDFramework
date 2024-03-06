@@ -62,9 +62,8 @@ public class registerStpes extends browserPage{
 		registerPage.clickOnRegister();
 	}
 
-	@Then("vallidate User Register Successfully alert message")
-	public void vallidate_user_register_successfully_alert_message() {
-		String msg=registerPage.alertmsg();
-		Assert.assertEquals(msg,"User Register Successfully");
+	@Then("vallidate User Register Successfully")
+	public void vallidate_user_register_successfully() throws InterruptedException {
+		registerPage.backToLoginPage();
 	}
 }

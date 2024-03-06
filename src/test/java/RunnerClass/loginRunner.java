@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features= {"C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\BDDFramework\\src\\test\\resources\\register.feature"},
+features= {"C:\\Users\\maaradwa\\git\\BDDFramework\\src\\test\\resources\\register.feature"},
 glue="stepDefinition",
 //tags= "not @tag1",
 dryRun = false

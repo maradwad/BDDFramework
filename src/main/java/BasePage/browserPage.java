@@ -18,7 +18,7 @@ public class browserPage {
 	
 	public browserPage() throws IOException
 	{
-		String file="C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\BDDFramework\\src\\main\\resources\\config.properties";
+		String file=System.getProperty("user.dir")+"\\src\\main\\resources\\config.properties";
 		FileInputStream fi=new FileInputStream(file);
 		prop=new Properties();
 		prop.load(fi);
@@ -29,20 +29,20 @@ public class browserPage {
 		String browser=prop.getProperty("browserName");
 		if(browser.equalsIgnoreCase("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\BDDFramework\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
 			ChromeOptions options=new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
 			driver=new ChromeDriver(options);
 		}
 		else if(browser.equalsIgnoreCase("edge"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\BDDFramework\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
 			driver =new EdgeDriver();
 			
 		}
 		else if(browser.equalsIgnoreCase("firefox"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\BDDFramework\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
 			driver=new FirefoxDriver();
 			
 		}

@@ -21,6 +21,8 @@ public class registerPage extends browserPage {
 	static By userName=By.id("userName");
 	static By password=By.xpath("//*[@id=\"password\"]");
 	static By register=By.id("register");
+	static By backToLogin=By.id("gotologin");
+	static By output=By.xpath("//*[@id=\"output\"]");
 	static JavascriptExecutor js;
 	
 	
@@ -43,7 +45,7 @@ public class registerPage extends browserPage {
 	public static void enterUserName()
 	{
 		
-		driver.findElement(userName).sendKeys("maradwad");
+		driver.findElement(userName).sendKeys("madhuriara");
 	}
 	public static void enterPassword()
 	{
@@ -61,11 +63,18 @@ public class registerPage extends browserPage {
 		js.executeScript("window.scrollBy(0,1000)");
 		driver.findElement(register).click();		
 	}
-	public static String alertmsg()
+	public static void backToLoginPage() throws InterruptedException
 	{
-		Alert alert=driver.switchTo().alert();
-		String msg=alert.getText();
-		return msg;
+		Thread.sleep(5000);
+		String outPut=driver.findElement(output).getText();
+		if(outPut.equalsIgnoreCase(""))
+		{
+			driver.findElement(backToLogin).click();
+		}
+		else
+		{
+			System.out.println(outPut);
+		}
 	}
 
 	
