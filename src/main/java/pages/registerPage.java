@@ -32,6 +32,7 @@ public class registerPage extends browserPage {
 		driver.findElement(newUser).click();
 		
 	}
+	
 	public static void enterfirstName()
 	{
 		driver.findElement(firstName).sendKeys("Madhuri");

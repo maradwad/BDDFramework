@@ -25,7 +25,7 @@ Feature: Login to BookStoreApplication
   When user enter username
   And enter valid password
   And click on login button
-  Then user should be navigated to bookdstore page
+  Then user should be navigated to bookstore page
   
   
   
